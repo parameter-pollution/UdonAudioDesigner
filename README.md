@@ -1,2 +1,42 @@
 # UdonAudioDesigner
 An in-game audio soundscape designer for VRChat written in udon sharp.
+
+### Try it in this VRChat World: [Udon Audio Designer](https://vrchat.com/home/world/wrld_2255fddb-ab92-4d3c-8b75-265d588f3130/)
+
+## Installation
+1. Create an "UdonSharp" World via the VRChat Creator Companion
+2. Import [latest USharpVideo](https://github.com/MerlinVR/USharpVideo/releases)
+3. Import [latest UdonAudioDesigner](https://github.com/parameter-pollution/UdonTimeMachine/releases)
+
+## Usage
+1. Drag&Drop the "AudioDesigner" prefab in the "AudioDesigner" folder in your Unity project into your scene
+1. Add audio clips to your VRChat world in Unity
+2. Click on the "AudioDesigner" object in the scene tree and drag&drop the audio clips you want to play with in your world into the "Audio Clips" list in the inspector
+![AudioDesignerInspector](https://github.com/parameter-pollution/UdonAudioDesigner/assets/4985522/cd9c6d5f-98d1-4e46-8ef6-a1606741413c)
+
+## Ambisonic Audio
+If you have an ambisonic audio file (for Unity it needs to be in 1st order AmbiX (B-Format ANC), SN3D normalized); check out [Elevative's ambisonic recordings](https://www.patreon.com/posts/example-audio-53930477)) then add it to your unity project, click on it and check the "Ambisonic" checkbox in the inspector.
+Then Udon Audio Designer will automatically treat it as an ambisonic file and configure the audio source settings correctly.
+Ambisonic audio is directional, so if you rotate the audio source object then the directions of the sounds in the audio clip will also rotate around you.
+Just grab the audio source and rotate it to play around with this.
+
+## Audio Scene Presets
+You can upload json containing multiple audio scenes as e.g. a github gist (only works with domains allowed by VRChat) and put the URL into the "Presets Download URL" field in the inspector on the "AudioDesigner" object and it will load (up to the first 6) them and show them as buttons on the main menu panel.
+Example preset json file (which is used in the linked VRChat World) is [here](https://gist.githubusercontent.com/parameter-pollution/f0f14b73f7f99f7460b5aa1b85332e53/raw/gistfile1.txt).
+
+## How is this code able to modify the VRC_SpatialAudioSource component settings, even though they are not exposed to udonsharp?
+The unity audio source
+```csharp
+SetSpatializerFloat(int index, float value)
+```
+method is exposed in udonsharp, which is exactly what the VRC_SpatialAudioSource component from VRChat is using.
+So I "just" reimplemented the spatializer configuration that is done in the VRC_SpatialAudioSource in my own code with that function.
+
+## Disclaimer
+This is just a pet project of mine. I wanted it to exist and it didn't, so I decided to try to create it. But I don't have much time that I can put into it. So if you come up with a better system than this then send me a link and I will link to it here prominently. I don't need my name attached to this, I just want it to exist.
+
+This code has grown over many months and different goals. It should probably be completely refactored and cleaned up, but I don't have the time for that right now and thought maybe it can at least help somebody else instead of collecting dust on my disk.
+
+USE AT YOUR OWN RISK
+
+Not affiliated with VRChat/Udon.
