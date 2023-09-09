@@ -22,7 +22,7 @@ Instead of the slow `change audio settings` -> `compile` -> `listen` (in VR) -> 
 Sadly, for now, you have to manually configure your own audio source. I ran out of time and motivation trying to figure out how to implement an editor UI that would do that based on the exported settings.
 Here are a few tips:
 - Spatialized mode enable/disable is just enabling/disabling the `Spatialize` checkbox in the `Advanced Options` of the `VRC_SpatialAudioSource` component (that you have to add to your audio source as normal)
-- Volume Falloff mode Linear and Logarithmic can be set by going to the `Advanced Options` of the `VRC_SpatialAudioSource` component and checking `Use AudioSource Volume Curve` and then selecting respective value in the `"Volume Rolloff` dropdown on the `AudioSource` component
+- Volume Falloff mode Linear and Logarithmic can be set by going to the `Advanced Options` of the `VRC_SpatialAudioSource` component and checking `Use AudioSource Volume Curve` and then selecting the respective value in the `"Volume Rolloff` dropdown on the `AudioSource` component
 - The `Near` and `Volumetric Radius` values are also hidden in the `Advanced Options` of the `VRC_SpatialAudioSource`
 - The rest of the values should be 1:1 those on the `AudioSource` and `VRC_SpatialAudioSource` component
 
