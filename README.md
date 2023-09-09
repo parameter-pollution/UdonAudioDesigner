@@ -33,7 +33,7 @@ The unity audio source
 SetSpatializerFloat(int index, float value)
 ```
 method is exposed in udonsharp, which is exactly what the VRC_SpatialAudioSource component from VRChat is using.
-So I "just" reimplemented the spatializer configuration that is done in the VRC_SpatialAudioSource in my own code with that function.
+So instead of using the VRC_SpatialAudioSource component I "just" reimplemented the spatializer configuration myself by using that function.
 
 ## Disclaimer
 This is just a pet project of mine. I wanted it to exist and it didn't, so I decided to try to create it. But I don't have much time that I can put into it. So if you come up with a better system than this then send me a link and I will link to it here prominently. I don't need my name attached to this, I just want it to exist.
