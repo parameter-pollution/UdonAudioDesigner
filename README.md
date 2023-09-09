@@ -10,7 +10,7 @@ Instead of the slow `change audio settings` -> `compile` -> `listen` (in VR) -> 
 ## Installation
 1. Create an "UdonSharp" World via the VRChat Creator Companion
 2. Import [latest USharpVideo](https://github.com/MerlinVR/USharpVideo/releases)
-3. Import [latest UdonAudioDesigner](https://github.com/parameter-pollution/UdonTimeMachine/releases)
+3. Import [latest UdonAudioDesigner](https://github.com/parameter-pollution/UdonAudioDesigner/releases)
 
 ## Usage
 1. Drag&Drop the `AudioDesigner\AudioDesigner.prefab` prefab into your scene tree
