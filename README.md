@@ -1,6 +1,7 @@
 # Udon Audio Designer
 An in-game audio soundscape designer for VRChat written in udon sharp.
-Instead of the slow "change audio settings" -> "compile" -> "listen" (in VR) -> "change audio settings" ... loop you can play with the settings live in VR to find the right settings faster.
+
+Instead of the slow `change audio settings` -> `compile` -> `listen` (in VR) -> `change audio settings` ... loop you can play with the settings live in VR to find the right settings faster.
 
 ![UI_screenshot](https://github.com/parameter-pollution/UdonAudioDesigner/assets/4985522/dc99d85a-29f0-4a85-9129-36d1aa02d445)
 
