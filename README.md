@@ -1,5 +1,6 @@
 # UdonAudioDesigner
 An in-game audio soundscape designer for VRChat written in udon sharp.
+Instead of the slow "change audio settings" -> "compile" -> "listen" (in VR) -> "change audio settings" ... loop you can play with the settings live in VR to find the right settings faster.
 
 ### Try it in this VRChat World: [Udon Audio Designer](https://vrchat.com/home/world/wrld_2255fddb-ab92-4d3c-8b75-265d588f3130/)
 
@@ -15,7 +16,7 @@ An in-game audio soundscape designer for VRChat written in udon sharp.
 ![AudioDesignerInspector](https://github.com/parameter-pollution/UdonAudioDesigner/assets/4985522/cd9c6d5f-98d1-4e46-8ef6-a1606741413c)
 
 ## Ambisonic Audio
-If you have an ambisonic audio file (for Unity it needs to be in 1st order AmbiX (B-Format ANC), SN3D normalized); check out [Elevative's ambisonic recordings](https://www.patreon.com/posts/example-audio-53930477)) then add it to your unity project, click on it and check the "Ambisonic" checkbox in the inspector.
+If you have an ambisonic audio file (for Unity it needs to be in 1st order AmbiX (B-Format ANC), SN3D normalized); check out [Elevative's ambisonic recordings](https://www.patreon.com/posts/example-audio-53930477)), then add it to your unity project, click on it and check the "Ambisonic" checkbox in the inspector.
 Then Udon Audio Designer will automatically treat it as an ambisonic file and configure the audio source settings correctly.
 Ambisonic audio is directional, so if you rotate the audio source object then the directions of the sounds in the audio clip will also rotate around you.
 Just grab the audio source and rotate it to play around with this.
